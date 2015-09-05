@@ -1,13 +1,13 @@
 # Quartet Health Questionnaire Component
 
-## CONTENTS OF THIS FILE
+## Contents of This File
 
 * Introduction
 * Setup & Building
 * Testing
 * Deployment
 
-## INTRODUCTION
+## Introduction
 
 This project contains a demo of the PHQ-9 (http://patient.info/doctor/patient-health-questionnaire-phq-9) implemented in React and Flux.
 
