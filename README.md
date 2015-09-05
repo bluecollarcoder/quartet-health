@@ -1,29 +1,29 @@
-# quartet-questionnaire
+# Quartet Health Questionnaire Component
 
-# CONTENTS OF THIS FILE
+## CONTENTS OF THIS FILE
 
 * Introduction
 * Setup & Building
 * Testing
 * Deployment
 
-# INTRODUCTION
+## INTRODUCTION
 
 This project contains a demo of the PHQ-9 (http://patient.info/doctor/patient-health-questionnaire-phq-9) implemented in React and Flux.
 
-# Setup & Building
+## Setup & Building
 
 Before setting up and building the project, please make sure that you have NPM installed. Once all the files have been checked out or extracted to the project directory, run `npm install` to install all the dependencies. Then run `npm run build` to have Browserify bundle all the Javascript files into a bundle file.
 
-# Testing
+## Testing
 
 The QuestionnaireComponent class and QuestionnaireStore class come with their own set of tests. To execute the test suite, run `npm run test` in the project directory. The test will recursively execute all the JS files in the /test directory.
 
-# Deployment
+## Deployment
 
 To deploy the demo, just copy `index.html` and the `static` directory to web root.
 
-# Approach
+## Approach
 
 The questionnaire feature is broken into three main components: QuestionnaireComponent (the actual React component), QuestionnaireStore (the object that stores all of the state of the component) and QuestionnaireActions (a singleton action creator that contains all the actions that can be triggered). To tied these pieces together, I am using the Flux dispatcher. When a user interacts with the UI, actions are created by the action creator and routed through the dispatcher to the store. While the dispatcher is not strictly necessary, it is essential if there are multiple stores that need to respond to user actions. The store is a subclass of the EventEmitter class, which allows other objects to listen for events that it fires. Once the store receives an action, it updates the state of the app accordingly and fires an event to notify the component that the state has changed. The component pulls the new state from the store and re-renders itself.
 
